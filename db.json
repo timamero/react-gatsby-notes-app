@@ -1,24 +1,24 @@
 {
   "notes": [
     {
-      "id": "1",
+      "id": 1,
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus libero nunc, quis tempor sapien finibus eu. In eget maximus sapien. Aliquam ut arcu nibh. Nam ut mi nec odio.",
       "date": "Wed Nov 03 2021 23:21:03 GMT-0700 (Pacific Daylight Time)"
     },
     {
-      "id": "2",
+      "id": 2,
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus libero nunc, quis tempor sapien finibus eu. In eget maximus sapien. Aliquam ut arcu nibh. Nam ut mi nec odio.",
       "date": "Wed Oct 27 2021 23:21:03 GMT-0700 (Pacific Daylight Time)"
     },
     {
-      "id": "3",
+      "id": 3,
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus libero nunc, quis tempor sapien finibus eu. In eget maximus sapien. Aliquam ut arcu nibh. Nam ut mi nec odio.",
       "date": "Wed Oct 20 2021 23:21:03 GMT-0700 (Pacific Daylight Time)"
     },
     {
-      "noteContent": "my new note",
-      "date": "Thu Nov 04 2021 07:44:38 GMT-0700 (Pacific Daylight Time)",
-      "id": "195"
+      "content": "testing sending a note",
+      "date": "Thu Nov 04 2021 11:25:12 GMT-0700 (Pacific Daylight Time)",
+      "id": 590
     }
   ]
 }

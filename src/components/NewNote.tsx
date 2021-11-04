@@ -1,14 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
-interface ResponseData {
-  data: Note
-}
-
 interface Note {
-  noteContent: string;
+  content: string;
   date: string;
-  id: string;
+  id: number;
 }
 
 const NewNote: React.FC = () => {
@@ -18,23 +14,20 @@ const NewNote: React.FC = () => {
 
   const handleNoteSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault()
-    console.log('start submit')
     const target = event.target as typeof event.target & {
       noteContent: { value: string };
     };
     const noteContent = target.noteContent.value;
-
+    
     const noteObject = {
-      noteContent,
+      content: noteContent,
       date: Date().toString(),
-      id: generateRandomNum().toString(),
+      id: generateRandomNum(),
     }
 
     const postData = async (obj: Note) => {
       try {
-        const data: ResponseData = await axios.post('http://localhost:3001/entries', obj)
-        const response: Note = data.data
-        console.log('response', response)
+        await axios.post('http://localhost:3001/notes', obj)
 
       } catch (error) {
         console.log(error)

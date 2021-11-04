@@ -1,9 +1,11 @@
 import React from "react";
+import axios from 'axios';
 
 interface NoteProps {
   note: {
     date: string;
     content: string;
+    id: number;
   }
 }
 
@@ -14,8 +16,17 @@ interface DateTimeFormat {
 }
 
 const Note: React.FC<NoteProps> = ({ note }) => {
-  // var utcSeconds = Date.parse(note.date);
-  
+
+  const handleDeleteClick = () => {
+    const deleteData = async (id: number) => {
+      try {
+        await axios.delete(`http://localhost:3001/notes/${id}`)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    deleteData(note.id)
+  }
 
   const dateOptions: DateTimeFormat = {
     year: 'numeric',
@@ -26,10 +37,10 @@ const Note: React.FC<NoteProps> = ({ note }) => {
   const formattedDate = date.toLocaleDateString('en-us', dateOptions)
 
   return (
-    <li>
+    <li className="card">
       <p className="is-size-5 has-text-weight-semibold	">{formattedDate}</p>
       <p>{note.content}</p>
-      <button className="button is-danger is-light">Delete</button>
+      <button className="button is-danger is-light" onClick={handleDeleteClick}>Delete</button>
     </li>
   )
 }
