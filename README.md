@@ -1,5 +1,6 @@
 # 📓 Notes Application
 
+A simple notes we application.
 This application was created with React, Gatsby, and Typescript.
 
 ## 🚀 Quick Start
