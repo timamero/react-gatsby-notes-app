@@ -31,13 +31,12 @@ const EntryList: React.FC = () => {
   }, [])
 
   return (
-    <ul>
+    <ul className="container is-fluid">
       { notes &&
         notes.map(note => (
           <Note key={note.id} note={note}/>
         ))
       }
-      <li>test</li>
     </ul>
   )
 }

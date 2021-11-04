@@ -39,18 +39,22 @@ const NewNote: React.FC = () => {
 
   return (
     <div>
-      <h2 className="title is-5">New Note</h2>
-      <form onSubmit={handleNoteSubmit}>
-        <textarea 
-          name="note-content" 
-          id="noteContent"
-          className="textarea is-hovered" 
-          cols={30} 
-          rows={10}
-          placeholder="Enter note..."
-        ></textarea>
-        <div className="control">
-          <button className="button is-primary">Submit</button>
+      <h2 className="title is-5 has-text-centered">New Note</h2>
+      <form onSubmit={handleNoteSubmit} className="container is-fluid">
+        <div className="block">
+          <textarea 
+            name="note-content" 
+            id="noteContent"
+            className="textarea is-hovered" 
+            cols={30} 
+            rows={10}
+            placeholder="Enter note..."
+          ></textarea>
+        </div>
+        <div className="block">
+          <div className="control has-text-centered">
+            <button className="button is-primary">Submit</button>
+          </div>
         </div>
       </form>
     </div>

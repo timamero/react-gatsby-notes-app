@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 
 const NavBar: React.FC = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/" className="button is-light">My Notes</Link>
-        <Link to="/create" className="button is-light">Add Note</Link>
+    <div className="block">
+      <nav className="buttons is-centered">
+        <Link to="/" className="button is-light" activeClassName="is-active">My Notes</Link>
+        <Link to="/create" className="button is-light" activeClassName="is-active">Add Note</Link>
       </nav>
     </div>
   )

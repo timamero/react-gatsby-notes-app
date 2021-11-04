@@ -37,10 +37,19 @@ const Note: React.FC<NoteProps> = ({ note }) => {
   const formattedDate = date.toLocaleDateString('en-us', dateOptions)
 
   return (
-    <li className="card">
-      <p className="is-size-5 has-text-weight-semibold	">{formattedDate}</p>
-      <p>{note.content}</p>
-      <button className="button is-danger is-light" onClick={handleDeleteClick}>Delete</button>
+    <li className="block">
+      <div className="card">
+        <div className="card-header">
+          <p className="card-header-title is-size-5 has-text-weight-semibold	">{formattedDate}</p>
+        </div>
+        <div className="card-content">
+          <p className="content">{note.content}</p>
+        </div>
+        <footer className="card-footer">
+         <button className="button m-1 is-danger is-light is-small" onClick={handleDeleteClick}>Delete</button>
+        </footer>
+      {/* <button className="button is-danger is-light is-small" onClick={handleDeleteClick}>Delete</button> */}
+      </div>
     </li>
   )
 }
