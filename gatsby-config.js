@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Notes App",
+    title: `Web Journal`,
   },
-  plugins: ["gatsby-plugin-sass"],
-};
+  plugins: [`gatsby-plugin-sass`],
+}
