@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Note from './Note';
 
 interface ResponseData {
   data: []
 }
 
-interface Entry {
+interface NoteObj {
   id: number;
   type: string;
   content: string;
   date: string;
-  prevState: null;
 }
 
 const EntryList: React.FC = () => { 
-  const [entries, setEntries] = useState<Entry[] | null>(null)
+  const [notes, setNotes] = useState<NoteObj[] | null>(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data: ResponseData = await axios.get('http://localhost:3001/entries')
-        const response: Entry[] = data.data
-        setEntries(response)
+        const data: ResponseData = await axios.get('http://localhost:3001/notes')
+        const response: NoteObj[] = data.data
+        setNotes(response)
       } catch (error) {
         console.log(error)
       }
@@ -32,12 +32,9 @@ const EntryList: React.FC = () => {
 
   return (
     <ul>
-      { entries &&
-        entries.map(entry => (
-          <li key={entry.id}>
-            <p>{entry.date}</p>
-            <p>{entry.content}</p>
-          </li>
+      { notes &&
+        notes.map(note => (
+          <Note key={note.id} note={note}/>
         ))
       }
       <li>test</li>
