@@ -9,7 +9,7 @@ const IndexPage: React.FC = () => {
   //   height: '100vh',
   // }
   return (
-    <div className="page has-background-dark has-text-light">
+    <div>
       <Layout>
         <NotesList />
       </Layout>

@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = (props) => {
   return (
-    <div>
+    <div className="page has-background-dark is-family-sans-serif has-text-light ">
       <MainHeader />
       <NavBar />
       {props.children}

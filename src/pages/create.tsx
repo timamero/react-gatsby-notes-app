@@ -7,7 +7,7 @@ const CreatePage: React.FC = () => {
   //   height: '100vh',
   // }
   return (
-    <div className="page has-background-dark has-text-light">
+    <div>
       <Layout>
         <NewNote />
       </Layout>
