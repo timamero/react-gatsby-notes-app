@@ -41,13 +41,14 @@ describe('home page tests', () => {
 
     it('a note delete button can be clicked', () => {
       cy.postMultipleNotes(1)
-      cy.get('.delete').click()
+      cy.get('.delete-btn').click()
     })
 
-    it.only('when note is deleted it is not visible', () => {
+    it('when note is deleted it is not visible', () => {
       cy.postMultipleNotes(1)
       cy.contains('note 0 test')
-      cy.get('.delete').click()
+      cy.get('.delete-btn').click()
+      cy.wait(1000)
       cy.contains('note 0 test').should('not.exist')
     })
   })

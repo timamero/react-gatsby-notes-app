@@ -1,5 +1,6 @@
 import React from "react";
 import axios from 'axios';
+// import { navigate } from 'gatsby';
 
 interface NoteProps {
   note: {
@@ -21,12 +22,18 @@ const Note: React.FC<NoteProps> = ({ note }) => {
     const deleteData = async (id: number) => {
       try {
         await axios.delete(`http://localhost:3001/notes/${id}`)
+        console.log('deleted action')
+        // navigate(
+        //   '/',
+        //   { replace: true }
+        // )
+        window.location.reload()
       } catch (error) {
         console.log(error)
       }
     }
+    
     deleteData(note.id)
-    location.href = '/';
   }
 
   const dateOptions: DateTimeFormat = {
@@ -47,7 +54,7 @@ const Note: React.FC<NoteProps> = ({ note }) => {
           <p className="content">{note.content}</p>
         </div>
         <footer className="card-footer">
-         <button className="delete button m-1 is-danger is-light is-small" onClick={handleDeleteClick}>Delete</button>
+         <button className="delete-btn button is-small is-danger" onClick={handleDeleteClick}>Delete</button>
         </footer>
       </div>
     </li>

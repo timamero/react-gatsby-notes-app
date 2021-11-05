@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { navigate } from "gatsby"
 
 interface Note {
   content: string;
@@ -28,14 +29,12 @@ const NewNote: React.FC = () => {
     const postData = async (obj: Note) => {
       try {
         await axios.post('http://localhost:3001/notes', obj)
-
+        navigate('/')
       } catch (error) {
         console.log(error)
       }
     }
-
-    postData(noteObject)
-    location.href = '/';
+    postData(noteObject) 
   }
 
   return (

@@ -1,6 +1,6 @@
 # 📓 Notes Application
 
-A simple notes we application.
+A simple notes web application.
 This application was created with React, Gatsby, and Typescript.
 
 ## 🚀 Quick Start
@@ -11,6 +11,10 @@ git clone https://github.com/timamero/react-gatsby-notes-app.git
 2. Install dependencies
 ```sh
 npm install
+```
+3. Open the file package.json in the project folder and update the script for the server with the following script.
+```json
+"server": "json-server -p3001 --watch db.json",
 ```
 3. Run the development server
 ```sh
