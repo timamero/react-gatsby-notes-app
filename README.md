@@ -20,3 +20,14 @@ npm run server
 ```sh
 npm start
 ```
+
+## 🧪 Testing
+To run the test, run the following commands.
+1. Start development server (with test database) and site
+```sh
+npm run cypress:prestart
+```
+2. Run Cypress
+```sh
+npm run cypress
+```
