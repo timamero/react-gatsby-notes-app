@@ -22,7 +22,7 @@ npm start
 ```
 
 ## 🧪 Testing
-To run the test, run the following commands.
+To run the tests, run the following commands.
 1. Start development server (with test database) and site
 ```sh
 npm run cypress:prestart
