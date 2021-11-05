@@ -1,6 +1,6 @@
-import React from 'react';
-import NavBar from './NavBar';
-import MainHeader from './MainHeader';
+import React from 'react'
+import NavBar from './NavBar'
+import MainHeader from './MainHeader'
 
 type LayoutProps = {
   children: JSX.Element

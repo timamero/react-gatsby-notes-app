@@ -3,9 +3,6 @@ import Layout from '../components/Layout'
 import NewNote from "../components/NewNote"
 
 const CreatePage: React.FC = () => {
-  // const indexStyle = {
-  //   height: '100vh',
-  // }
   return (
     <div>
       <Layout>

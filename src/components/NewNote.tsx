@@ -1,12 +1,7 @@
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
+import notesServices, { NoteObj } from '../services/NotesServices'
 import { navigate } from "gatsby"
 
-interface Note {
-  content: string;
-  date: string;
-  id: number;
-}
 
 const NewNote: React.FC = () => {
   const generateRandomNum = () => {
@@ -26,9 +21,9 @@ const NewNote: React.FC = () => {
       id: generateRandomNum(),
     }
 
-    const postData = async (obj: Note) => {
+    const postData = async (obj: NoteObj) => {
       try {
-        await axios.post('http://localhost:3001/notes', obj)
+        await notesServices.create(obj)
         navigate('/')
       } catch (error) {
         console.log(error)

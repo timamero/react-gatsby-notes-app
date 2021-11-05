@@ -34,7 +34,7 @@ const Note: React.FC<NoteProps> = ({ note }) => {
     month: 'long',
     day: 'numeric'
   }
-  const date = new Date(Date.parse(note.date));
+  const date = new Date(Date.parse(note.date))
   const formattedDate = date.toLocaleDateString('en-us', dateOptions)
 
   return (
