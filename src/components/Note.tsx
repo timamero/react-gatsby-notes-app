@@ -1,6 +1,5 @@
 import React from "react";
-import axios from 'axios';
-// import { navigate } from 'gatsby';
+import notesServices from '../services/NotesServices';
 
 interface NoteProps {
   note: {
@@ -21,7 +20,7 @@ const Note: React.FC<NoteProps> = ({ note }) => {
   const handleDeleteClick = () => {
     const deleteData = async (id: number) => {
       try {
-        await axios.delete(`http://localhost:3001/notes/${id}`)
+        await notesServices.deleteObj(id)
         window.location.reload()
       } catch (error) {
         console.log(error)
