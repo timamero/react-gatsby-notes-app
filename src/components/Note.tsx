@@ -22,17 +22,11 @@ const Note: React.FC<NoteProps> = ({ note }) => {
     const deleteData = async (id: number) => {
       try {
         await axios.delete(`http://localhost:3001/notes/${id}`)
-        console.log('deleted action')
-        // navigate(
-        //   '/',
-        //   { replace: true }
-        // )
         window.location.reload()
       } catch (error) {
         console.log(error)
       }
     }
-    
     deleteData(note.id)
   }
 
