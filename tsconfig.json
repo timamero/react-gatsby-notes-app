@@ -14,5 +14,13 @@
     "removeComments": false,
     "preserveConstEnums": true
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "./src/**/*"
+    ],
+  "exclude": [
+    "./node_modules/**/*",
+    "./public/**/*",
+    "./cypress/**/*",
+    "./.cache/**/*",
+  ]
 }

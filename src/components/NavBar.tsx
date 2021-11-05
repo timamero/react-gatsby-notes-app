@@ -5,8 +5,8 @@ const NavBar: React.FC = () => {
   return (
     <div className="block">
       <nav className="buttons is-centered">
-        <Link to="/" className="button is-light" activeClassName="is-active">My Notes</Link>
-        <Link to="/create" className="button is-light" activeClassName="is-active">Add Note</Link>
+        <Link to="/" className="my-notes-btn button is-light" activeClassName="is-active">My Notes</Link>
+        <Link to="/create" className="add-note-btn button is-light" activeClassName="is-active">Add Note</Link>
       </nav>
     </div>
   )

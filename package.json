@@ -9,11 +9,14 @@
   ],
   "scripts": {
     "server": "json-server -p3001 --watch mydb.json",
+    "server:test": "json-server -p3001 --watch testdb.json",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "cypress:prestart": "concurrently \"npm run server:test\" \"npm run develop\"",
+    "cypress": "npx cypress open"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -26,7 +29,9 @@
     "sass": "^1.43.4"
   },
   "devDependencies": {
+    "concurrently": "^6.3.0",
     "cypress": "^8.7.0",
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "typescript": "^4.4.4"
   }
 }

@@ -31,11 +31,14 @@ const EntryList: React.FC = () => {
   }, [])
 
   return (
-    <ul className="container is-fluid">
-      { notes &&
+    <ul className="notes-wrapper container is-fluid">
+      { notes && notes.length > 0 
+        ?
         notes.map(note => (
           <Note key={note.id} note={note}/>
         ))
+        :
+        <li className="has-text-centered is-size-4">You do not have any notes😭. Go to Add Note to add some!</li>
       }
     </ul>
   )

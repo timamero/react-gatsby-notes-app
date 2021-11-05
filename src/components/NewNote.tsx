@@ -15,9 +15,9 @@ const NewNote: React.FC = () => {
   const handleNoteSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault()
     const target = event.target as typeof event.target & {
-      noteContent: { value: string };
+      noteContentInput: { value: string };
     };
-    const noteContent = target.noteContent.value;
+    const noteContent = target.noteContentInput.value;
     
     const noteObject = {
       content: noteContent,
@@ -35,6 +35,7 @@ const NewNote: React.FC = () => {
     }
 
     postData(noteObject)
+    location.href = '/';
   }
 
   return (
@@ -43,8 +44,8 @@ const NewNote: React.FC = () => {
       <form onSubmit={handleNoteSubmit} className="container is-fluid">
         <div className="block">
           <textarea 
-            name="note-content" 
-            id="noteContent"
+            name="note-contentInput" 
+            id="noteContentInput"
             className="textarea is-hovered" 
             cols={30} 
             rows={10}
@@ -53,7 +54,7 @@ const NewNote: React.FC = () => {
         </div>
         <div className="block">
           <div className="control has-text-centered">
-            <button className="button is-primary">Submit</button>
+            <button id="submitNewNote" className="button is-primary">Submit</button>
           </div>
         </div>
       </form>

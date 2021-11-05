@@ -5,9 +5,7 @@ import '../styles/styles.scss'
 import NotesList from '../components/NotesList';
 
 const IndexPage: React.FC = () => {
-  // const indexStyle = {
-  //   height: '100vh',
-  // }
+
   return (
     <div>
       <Layout>
