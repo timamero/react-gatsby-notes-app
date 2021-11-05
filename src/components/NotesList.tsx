@@ -1,27 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Note from './Note';
-
-interface ResponseData {
-  data: []
-}
-
-interface NoteObj {
-  id: number;
-  type: string;
-  content: string;
-  date: string;
-}
+import React, { useEffect, useState } from 'react'
+import notesServices from '../services/NotesServices'
+import { NoteObj } from '../services/NotesServices'
+import Note from './Note'
 
 const EntryList: React.FC = () => { 
-  const [notes, setNotes] = useState<NoteObj[] | null>(null)
+  const [notes, setNotes] = useState<NoteObj[] | null | void>(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data: ResponseData = await axios.get('http://localhost:3001/notes')
-        const response: NoteObj[] = data.data
-        setNotes(response)
+        const allNotes = await notesServices.getAll()
+        setNotes(allNotes)
       } catch (error) {
         console.log(error)
       }
