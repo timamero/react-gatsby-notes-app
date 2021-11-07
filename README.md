@@ -16,11 +16,11 @@ npm install
 ```json
 "server": "json-server -p3001 --watch db.json",
 ```
-3. Run the development server
+4. Run the development server
 ```sh
 npm run server
 ```
-4. Start site
+5. Start site
 ```sh
 npm start
 ```
