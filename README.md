@@ -24,6 +24,7 @@ npm run server
 ```sh
 npm start
 ```
+6. Open the browser and go to http://localhost:3000/
 
 ## 🧪 Testing
 To run the tests, run the following commands.
