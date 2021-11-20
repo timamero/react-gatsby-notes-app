@@ -1,5 +1,8 @@
 @charset "utf-8";
 // If need, change your variables before importing Bulma
-// $background: #22223b;
+
 $title-color: #f0efeb;
+$control-border-width: 0.25rem;
+$link-active-border: #6ACE96;
+
 @import "~bulma/bulma.sass";
