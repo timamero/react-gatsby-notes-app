@@ -3,7 +3,7 @@ import notesServices from '../services/NotesServices'
 import { NoteObj } from '../services/NotesServices'
 import Note from './Note'
 
-const EntryList: React.FC = () => { 
+const NotesList: React.FC = () => { 
   const [notes, setNotes] = useState<NoteObj[] | null | void>(null)
 
   useEffect(() => {
@@ -33,4 +33,4 @@ const EntryList: React.FC = () => {
   )
 }
 
-export default EntryList;
+export default NotesList;

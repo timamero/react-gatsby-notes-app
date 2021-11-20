@@ -5,7 +5,6 @@ import '../styles/styles.scss'
 import NotesList from '../components/NotesList';
 
 const IndexPage: React.FC = () => {
-
   return (
     <div>
       <Layout>
